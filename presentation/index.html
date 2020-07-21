@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+
+	<title>RCS WEB Izstrāde</title>
+
+	<meta name="description" content="Riga Coding School web development presentation" />
+	<meta name="author" content="Rolands Kalpins" />
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<link rel="stylesheet" href="css/reveal.min.css" />
+	<link rel="stylesheet" href="css/theme/night.css" id="theme" />
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css" />
+
+	<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+	<script>
+		document.write(
+			'<link rel="stylesheet" href="css/print/' +
+			(window.location.search.match(/print-pdf/gi) ? "pdf" : "paper") +
+			'.css" type="text/css" media="print">'
+		);
+	</script>
+
+
+	<!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<!-------------------------- slide ------------------------>
+				<h1>Web izstrāde</h1>
+				<h3>HTML, CSS, JS ...</h3>
+				<p>
+					<small><a href="http://trollis.lv">Rolands Kalpiņš</a></small>
+				</p>
+			</section>
+			<section>
+				<section data-background="images/cv/liknedin.PNG">
+					<h1>Kas esmu es?</h1>
+				</section>
+				<section>
+					<img src="images/cv/experience.PNG" alt="" srcset="" />
+				</section>
+				<section>
+					<img src="images/cv/education.PNG" alt="" srcset="" />
+				</section>
+				<section>
+					<img src="images/cv/languages.PNG" alt="" srcset="" />
+				</section>
+			</section>
+			<section>
+				<!-------------------------- slide ------------------------>
+				<h1>Kas mēs esam?</h1>
+				<p>
+					<li>Šobrid mana profesija ir...</li>
+					<li>Ko mācēji pirms RCS</li>
+					<li>Kā gāja C#</li>
+					<li>Kā gāja Javā</li>
+					<li>Ko sagaidu no web</li>
+					<li>Ko māku no web tehnoloģijām (HTML,CSS,JS...)</li>
+					<li>Kas notiek ar mājas darbiem?</li>
+					<li>Pēc kursiem mana profesija būs...</li>
+				</p>
+			</section>
+			<section>
+				<section>
+					<h1>Web istrādātāja dzīve</h1>
+					<img src="images/WebDesignMemes-6.png" />
+				</section>
+				<section>
+					<h1>Web izstrādātāju kategorijas</h1>
+					<p>
+						<li>Front-End</li>
+						<li>Back-End</li>
+						<li>Full-Stack</li>
+					</p>
+					<small>T shape learning & Marketable learning</small>
+				</section>
+				<section>
+					<h2>Vai programmētāja dzīve ir priekš manis?</h2>
+					<li>Darbs grupās un komandās</li>
+					<li>
+						Vairums uzņēmumos kodu skatās vairāki programmētāji un palīdz
+						viens otram pilnveidoies
+					</li>
+					<li>OpenSource kods</li>
+					<li>No šodienas jāmācās katru dienu</li>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Versiju kontroles sistēmas</h1>
+				</section>
+				<section>
+					<h2>Kādas versiju kontroles sisēmas Jūs zināt?</h2>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>HTML...</h1>
+				</section>
+				<section>
+					<h2>Kas ir HTML?</h2>
+					<ul>
+						<li>Hyper text markup language</li>
+						<li>apraksta web lapas struktūru</li>
+					</ul>
+				</section>
+				<section>
+					<h2>HTML vēsture</h2>
+					<ul>
+						<li>1989 - Tim Berners-Lee izveido www</li>
+						<li>1991 - Tim Berners-Lee izveido HTML</li>
+						<li>2014 - HTML5 kļūst par standartu</li>
+						<li>20?? - HTML6</li>
+					</ul>
+				</section>
+				<section>
+					<h2>HTML pamati</h2>
+					<pre><code data-trim>
+						<p>Sveika pasaule</p>
+					</code></pre>
+				</section>
+				<section>
+					<h2>HTML struktūra</h2>
+					<pre><code data-noescape data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&nbsp;&nbsp; &nbsp;&lt;meta charset=&quot;UTF-8&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+initial-scale=1.0&quot;&gt;
+&nbsp;&nbsp; &nbsp;&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;					
+&lt;body&gt;
+&nbsp;&nbsp; &nbsp;&lt;p&gt;Sveika pasaule!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+				<section>
+					<h2>HTML Elementi</h2>
+					<pre><code data-trim data-noescape>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;Virsraksts&lt;/h1&gt;
+&lt;p&gt;Pirmais paragrāfs &lt;br&gt; divās rindās.&lt;/p&gt;
+&lt;P&gt;Not case sensitive,but...&lt;/P&gt;
+&lt;p&gt;Kas te nav kārtībā?
+&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+				</section>
+				<section>
+					<h2>HTML atribūti</h2>
+					<pre><code data-trim >
+<img src="img_typo.jpg" alt="Girl with a jacket">
+					</code></pre>
+				</section>
+				<section>
+					<h2>HTML iespējas</h2>
+					<ul>
+						<li>Virsraksti - Headings - h1..h6</li>
+						<li>Paragrāfi - Paragraphs - p</li>
+						<li>Teksta formatēšana - Formatting - b,strong,i,em</li>
+						<li>Citēšana - Quotation - &lt;blockquote&gt;,&lt;q&gt;, &lt;abbr&gt;, &lt;address&gt;,
+							&lt;cite&gt;, and
+							&lt;bdo&gt; </li>
+						<li>Komentāri - Comments</li>
+						<li>saites - links - a</li>
+						<li>Attēli - Images - img</li>
+						<li>Saraksti - Lists - li</li>
+						<li>Tabulas - Table - table</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>Failu ceļi <br> File paths</h1>
+					<pre><code data-notrim>
+<img src="/images/picture.jpg">
+<img src="../picture.jpg">
+<img src="picture.jpg">
+<img src="./picture.jpg">
+<img src="../images/../picture.jpg">
+					</code></pre>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>HTML Formas</h1>
+				</section>
+				<section>
+					<ul>
+						<li> <code>&lt;label&gt;</code></li>
+						<li> <code>&lt;input&gt;</code></li>
+						<li> <code>&lt;select&gt;</code></li>
+						<li> <code>&lt;textarea&gt;</code></li>
+						<li> <code>&lt;button&gt;</code></li>
+						<li> <code>&lt;fieldset&gt;</code></li>
+						<li> <code>&lt;legend&gt;</code></li>
+						<li> <code>&lt;datalist&gt;</code></li>
+						<li> <code>&lt;output&gt;</code></li>
+						<li> <code>&lt;option&gt;</code></li>
+						<li> <code>&lt;optgroup&gt;</code></li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li><code>&lt;input type="button"&gt;</code></li>
+						<li><code>&lt;input type="checkbox"&gt;</code></li>
+						<li><code>&lt;input type="color"&gt;</code></li>
+						<li><code>&lt;input type="date"&gt;</code></li>
+						<li><code>&lt;input type="datetime-local"&gt;</code></li>
+						<li><code>&lt;input type="email"&gt;</code></li>
+						<li><code>&lt;input type="file"&gt;</code></li>
+						<li><code>&lt;input type="hidden"&gt;</code></li>
+						<li><code>&lt;input type="image"&gt;</code></li>
+						<li><code>&lt;input type="month"&gt;</code></li>
+						<li><code>&lt;input type="number"&gt;</code></li>
+						<li><code>&lt;input type="password"&gt;</code></li>
+						<li><code>&lt;input type="radio"&gt;</code></li>
+						<li><code>&lt;input type="range"&gt;</code></li>
+						<li><code>&lt;input type="reset"&gt;</code></li>
+						<li><code>&lt;input type="search"&gt;</code></li>
+						<li><code>&lt;input type="submit"&gt;</code></li>
+						<li><code>&lt;input type="tel"&gt;</code></li>
+						<li><code>&lt;input type="text"&gt;</code></li>
+						<li><code>&lt;input type="time"&gt;</code></li>
+						<li><code>&lt;input type="url"&gt;</code></li>
+						<li><code>&lt;input type="week"&gt;</code></li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>HTML iframe</h1>
+				</section>
+				<section>
+					<h2>Google karte</h2>
+				</section>
+				<section>
+					<h2>YouTube video</h2>
+				</section>
+				<section>
+					<h2>Any iframe...</h2>
+				</section>
+			</section>
+			<section>
+				<h1>
+					HTML vs XHTML
+				</h1>
+				<ul>
+					<li>&lt;!DOCTYPE&gt; is <strong>mandatory</strong></li>
+					<li>The xmlns attribute in &lt;html&gt; is <strong>mandatory</strong></li>
+					<li>&lt;html&gt;, &lt;head&gt;, &lt;title&gt;, and &lt;body&gt; are <strong>mandatory</strong></li>
+					<li>Elements must always be <b> properly nested</b></li>
+					<li>Elements must always be <b>closed</b></li>
+					<li>Elements must always be in <b>lowercase</b></li>
+					<li>Attribute names must always be in <b>lowercase</b></li>
+					<li>Attribute values must always be <b>quoted</b></li>
+					<li>Attribute minimization is <b>forbidden</b></li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h1>HTML bloku un rindas elementi</h1>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h1>HTML nezināmie</h1>
+					<ul>
+						<li>Responsive</li>
+						<li>Layout</li>
+						<li>Head</li>
+						<li>Classes</li>
+						<li>Id</li>
+						<li>Krāsas</li>
+						<li>...</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h1>HTML Resursi</h1>
+				<ul>
+					<li><a href="https://www.w3schools.com/html/default.asp">W3schools</a></li>
+					<li><a href="http://freecodecamp.org/">Free code camp</a></li>
+				</ul>
+			</section>
+			<section>
+				<h1>CSS...</h1>
+			</section>
+			<!-- https://flukeout.github.io/ -->
+			<!-- https://dev.to/devmount/8-games-to-learn-css-the-fun-way-4e0f -->
+			<!-- https://whatpixel.com/css-learning-games/ -->
+			<section>
+				<h1>JS...</h1>
+			</section>
+		</div>
+		<!-- slides -->
+	</div>
+	<!-- reveal -->
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition ||
+				"default", // default/cube/page/concave/zoom/linear/fade/none
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [{
+					src: "lib/js/classList.js",
+					condition: function () {
+						return !document.body.classList;
+					},
+				},
+				{
+					src: "plugin/markdown/marked.js",
+					condition: function () {
+						return !!document.querySelector("[data-markdown]");
+					},
+				},
+				{
+					src: "plugin/markdown/markdown.js",
+					condition: function () {
+						return !!document.querySelector("[data-markdown]");
+					},
+				},
+				{
+					src: "plugin/highlight/highlight.js",
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					},
+				},
+				{
+					src: "plugin/zoom-js/zoom.js",
+					async: true,
+					condition: function () {
+						return !!document.body.classList;
+					},
+				},
+				{
+					src: "plugin/notes/notes.js",
+					async: true,
+					condition: function () {
+						return !!document.body.classList;
+					},
+				},
+				// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+				// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+			],
+		});
+	</script>
+
+</body>
+
+</html>
