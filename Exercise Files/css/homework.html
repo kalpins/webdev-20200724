@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-Backgrounds</title>
+    <style>
+        body {
+            background-color: silver;
+        }
+
+        .first-div {
+            background-image: url(http://lorempixel.com/output/city-q-c-640-480-9.jpg);
+            height: 1000px;
+            background-size: cover;
+        }
+
+        #parallax {
+            background-image: url(http://lorempixel.com/output/transport-q-c-640-480-2.jpg);
+            height: 1000px;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: rgb(226, 223, 15);
+        }
+
+        .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+
+        .bottom-right {
+            position: absolute;
+            bottom: 30px;
+            right: 16px;
+        }
+
+        .bottom-left {
+            position: absolute;
+            bottom: 30px;
+            left: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first-div">
+        <p>
+            Suspendisse neque elit, ullamcorper non porta vitae, hendrerit in sapien. Suspendisse ac diam in nisl
+            rhoncus dignissim. Nunc imperdiet est at lacus feugiat, sit amet volutpat ante porta. Maecenas dictum
+            sollicitudin gravida. Praesent viverra, lectus id pulvinar molestie, leo est euismod elit, eu cursus lacus
+            risus id metus. Morbi pretium ac mauris eget tempus. Sed id vulputate quam.
+        </p>
+        <p>
+            Nullam sit amet malesuada turpis, non tempus nunc. Quisque sed sem rhoncus, fringilla sapien non, rhoncus
+            lorem. Maecenas sollicitudin vitae lacus vel interdum. Donec risus sem, consequat in vehicula sit amet,
+            posuere eget arcu. Nam vel imperdiet odio. Suspendisse suscipit hendrerit leo, condimentum ullamcorper
+            tortor rhoncus a. Nullam tempus diam at libero elementum, nec facilisis lorem egestas. Nunc luctus
+            pellentesque arcu eu sollicitudin. Etiam libero massa, semper vel condimentum eu, vehicula sit amet magna.
+        </p>
+        <p>
+            Quisque pellentesque eros auctor, condimentum dolor a, ultrices orci. Maecenas pulvinar condimentum
+            pharetra. Quisque sit amet dolor eget lorem semper lobortis sit amet vel odio. Vestibulum porttitor faucibus
+            nibh, ac sagittis eros gravida at. Duis nisl magna, faucibus vitae velit eget, rhoncus cursus nisl. Nullam
+            pretium efficitur erat quis consequat. Nulla facilisi. Integer augue ipsum, semper a ultrices id, suscipit
+            in tellus.
+        </p>
+    </div>
+    <div id="parallax"></div>
+    <div class="container">
+        <img src="http://lorempixel.com/output/fashion-q-c-640-480-5.jpg" alt="Fashion" style="width: 100%;">
+        <div class="bottom-left">Bottom Left</div>
+        <div class="top-left">Top Left</div>
+        <div class="top-right">Top Right</div>
+        <div class="bottom-right">Bottom Right</div>
+        <div class="centered">Centered</div>
+    </div>
+</body>
+
+</html>

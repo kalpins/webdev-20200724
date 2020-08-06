@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+    <style>
+        .column {
+            width: 300px;
+            border: 1px solid grey;
+            box-shadow: black 1px 3px 6px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .title,
+        .jobTitle,
+        .studies,
+        ul,
+        a.btn {
+            text-align: center;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        ul li {
+            display: inline-block;
+            font-size: 24px;
+            padding: 10px;
+
+        }
+
+        .title {
+            font-size: 36px;
+        }
+
+        .jobTitle {
+            font-size: 20px;
+            color: gray;
+            text-transform: small-caps;
+        }
+
+        a.btn {
+            width: 100%;
+            display: block;
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 15px 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile">
+        <div class="container">
+            <div class="row">
+                <div class="column">
+                    <img width="100%" src="http://placekitten.com/g/300/200" alt="Kitten">
+                    <h2 class="title">Murris</h2>
+                    <p class="jobTitle">CEO of Kitkat</p>
+                    <p class="studies">Mjauward Univeristy</p>
+                    <ul>
+                        <li><i class="fab fa-facebook-f" aria-hidden="true"></i></li>
+                        <li><i class="fab fa-linkedin" aria-hidden="true"></i></li>
+                        <li><i class="fab fa-twitter" aria-hidden="true"></i></li>
+                    </ul>
+                    <a href="#" class="btn">Contact me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

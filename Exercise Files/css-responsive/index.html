@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .content {
+            background-color: #333;
+            color: #ccc;
+            margin-top: -15px;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .row {
+            margin: 15px;
+            padding: 15px;
+        }
+
+        .column {
+            display: inline-block;
+        }
+
+        .body {
+            width: 66%;
+        }
+
+        .sidebar {
+            width: 33%;
+        }
+
+
+
+        @media only screen and (max-width: 850px) {
+            .container {
+                width: 600px;
+            }
+        }
+
+        @media only screen and (max-width: 650px) {
+            .container {
+                width: 100%;
+            }
+
+            .sidebar,
+            .body {
+                width: 100%;
+            }
+
+            .mobileFriendly {
+                border: 3px solid red;
+            }
+        }
+
+        @media only print {
+            .content {
+                background-color: #ccc;
+                color: #333
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="container mobileFriendly">
+            <div class="row">
+                <div class="column body">
+                    body
+                </div>
+                <div class="column sidebar">
+                    sidebar
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
