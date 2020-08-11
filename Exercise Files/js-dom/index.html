@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+</head>
+
+<body>
+    <header id="myid" class="header-class">Header</header>
+    <main class='red-text'>My main</main>
+    <footer class='red-text'>Footer</footer>
+    <!-- <script src="script.js"></script> -->
+</body>
+
+</html>
+
+<script>
+    document.getElementById('myid').innerText = "Changed header";
+    console.log(document);
+    console.log(document.getElementById('myid'));
+    console.log(document.getElementsByClassName('header-class'));
+
+    var redText = document.getElementsByClassName('red-text');
+    for (i = 0; i < redText.length; i++) {
+        redText[i].innerText = "red-text";
+        document.getElementsByClassName('red-text')[i].innerHTML += "<h2>RED Text</h2>";
+        redText[i].style.color = "red";
+        redText[i].style.fontSize = "20px";
+    }
+
+    console.log(document.getElementsByTagName("main"));
+
+    console.log(window);
+
+    console.log(window.innerHeight);
+    console.log(window.innerWidth);
+    window.innerHeight = 500;
+    console.log(window.innerHeight);
+    // window.location.replace("http://google.com");
+    // console.log(window.Geolocation);
+
+    // window.onclick(alert("You clicked!"));
+</script>

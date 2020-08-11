@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <style>
+        #box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #bbox {
+            width: 50px;
+            height: 500px;
+            display: none;
+            background-color: green;
+        }
+
+        .color-white {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+
+    </div>
+    <div id="bbox"></div>
+</body>
+
+</html>
+<script>
+    $(document).ready(function () {
+        $('#box').hover(function () {
+            $('#bbox').slideDown();
+        })
+
+
+        $('#box').css("width", "500px");
+        $('#box').html('<input type="email" name="email" id="email">');
+        $('#box').append("<span>ERROR</span>");
+        $('#box').before("<div id='fakeBox'>I Love jQuery</div>");
+        $('#fakeBox').contents().wrap("<div></div>")
+        $('#box').click(function () {
+            $('#box').css("width", "50px");
+            $('#box').css("height", "500px");
+            $('div#box input').hide(1000);
+        })
+        $('#box').addClass('color-white');
+        $('body div#box input[type="email"]').css("background", "yellow")
+        $('#box').dblclick(function () {
+            $('#box').animate({
+                "width": "500px",
+                "height": "50px"
+            });
+            // $('#box').animate({
+            //     "height": "50px"
+            // });
+            $('div#box input').show();
+        })
+        $('#box').hover(function () {
+            $('#box').stop();
+            $('#box').animate({
+                "height": "+=5px"
+            }).animate({
+                "width": "-=10px"
+            })
+        })
+    })
+
+    // $(function () {
+    //     $('#box').css("width", "500px");
+    // })
+</script>
