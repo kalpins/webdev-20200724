@@ -1,1 +1,54 @@
-sc
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <h1>{{title}}</h1>
+        {{ message }}
+        {{year}}
+        {{masivs[1]}}
+        {{objekts[1].name}}
+        <br>{{sveiki()}}
+    </div>
+    <footer id="footer" class="footer">
+        {{year}}
+    </footer>
+</body>
+
+</html>
+<script>
+    var app = new Vue({
+        el: '#root',
+        data: {
+            message: 'Hello Vue!',
+            title: "Mans virsraksts",
+            year: 2020,
+            masivs: ["Rolands", "Jānis", "Pēteris"],
+            objekts: [{
+                    name: "Rolands",
+                    age: 26
+                },
+                {
+                    name: "Pēteris",
+                    age: 24
+                },
+                {
+                    name: "Jānis",
+                    age: 22
+                },
+            ]
+        },
+        methods: {
+            sveiki: function () {
+                return "Sveiki, " + this.objekts[0].name;
+            }
+        }
+    })
+</script>
