@@ -6,16 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VueJS</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .red_text {
+            color: red;
+            font-size: 20px;
+        }
+
+        .spaced {
+            letter-spacing: 15px;
+        }
+    </style>
 </head>
 
 <body>
     <div id="root">
-        <h1>{{title}}</h1>
+        <h1 v-show="showTitle">{{title}}</h1>
+        <h1 v-if="showTitle">{{title}}</h1>
+        <h1 v-else="showTitle">{{message}}</h1>
+
+        <div v-if="year===2020">Today</div>
+        <div v-else-if="year<2020">Past</div>
+        <div v-else-if="year>2020">future</div>
+        <div v-else>Error</div>
+
+        <input type="checkbox" v-model="showTitle">
         {{ message }}
         {{year}}
         {{masivs[1]}}
         {{objekts[1].name}}
         <br>{{sveiki()}}
+        <img v-bind:src="bilde.path" :alt="bilde.alt">
+        <input type="text" v-model="message" @keyup.enter="sveikaKonsole">
+        <div v-html="htmlTeksts" :class="{red_text:showTitle, spaced: showTitle}"></div>
+        <button @click="sayhi">Klik mē</button>
+        {{izskaitlots}}
+        <button @click="sayYear(100)">next year</button>
+        <ul>
+            <li v-for="(name,index) in masivs">{{index+1}} {{name}}</li>
+        </ul>
     </div>
     <footer id="footer" class="footer">
         {{year}}
@@ -24,9 +52,23 @@
 
 </html>
 <script>
+    var footerVue = new Vue({
+        el: '#footer',
+        data: {
+            year: 2030
+        }
+    })
+
+
     var app = new Vue({
         el: '#root',
         data: {
+            bilde: {
+                path: "logo.png",
+                alt: "RCS Logo"
+            },
+            htmlTeksts: "<strong>Teksts</strong>",
+            showTitle: true,
             message: 'Hello Vue!',
             title: "Mans virsraksts",
             year: 2020,
@@ -48,6 +90,20 @@
         methods: {
             sveiki: function () {
                 return "Sveiki, " + this.objekts[0].name;
+            },
+            sveikaKonsole: function () {
+                console.log(this.message);
+            },
+            sayhi: function (event) {
+                console.log(event)
+            },
+            sayYear: function (gads) {
+                console.log(gads)
+            }
+        },
+        computed: {
+            izskaitlots: function () {
+                return this.year * 3;
             }
         }
     })
